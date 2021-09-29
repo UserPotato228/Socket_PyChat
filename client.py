@@ -16,5 +16,5 @@ thr = threading.Thread(target = recvSoc)
 thr.start()
 
 while True:
-   message = input("message: ")
-   sendto(("["+name+"]:"+message).encode("utf-8"), server) 
+   message = input()
+   clnt_sock.sendto(("["+name+"]:"+message).encode("utf-8"), server) 
